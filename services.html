@@ -8,45 +8,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar"> <!-- тот же код навигации, что выше --> </nav>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo"><span class="logo-icon">🩺</span> Здоровье</div>
+      <div class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="about.html">О нас</a>
+        <a href="doctors.html">Врачи</a>
+        <a href="reviews.html">Отзывы</a>
+      </div>
+      <a href="#appointment" class="btn-primary">Записаться</a>
+    </div>
+  </nav>
 
   <section class="section">
     <div class="container">
       <h1>Наши услуги и цены</h1>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card card">
           <h3>Консультация терапевта</h3>
           <p class="price">3 500 ₽</p>
           <p>Первичный приём, осмотр, назначение лечения</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>УЗИ органов брюшной полости</h3>
           <p class="price">2 800 ₽</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>ЭКГ с расшифровкой</h3>
           <p class="price">1 500 ₽</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>Общий анализ крови</h3>
           <p class="price">800 ₽</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>Консультация кардиолога</h3>
           <p class="price">4 200 ₽</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>МРТ головного мозга</h3>
           <p class="price">7 500 ₽</p>
         </div>
       </div>
 
-      <div id="appointment" class="appointment-form">
-        <h2>Записаться на приём</h2>
-        <form onsubmit="event.preventDefault(); alert('Заявка отправлена! Спасибо!');">
-          <input type="text" placeholder="Ваше имя" required>
-          <input type="tel" placeholder="Телефон" required>
-          <button type="submit" class="btn-primary">Отправить заявку</button>
+      <div id="appointment" style="margin-top: 80px; background: white; padding: 50px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+        <h2 style="text-align:center; margin-bottom:30px;">Записаться на приём</h2>
+        <form onsubmit="event.preventDefault(); alert('Заявка отправлена! Спасибо!');" style="max-width:500px; margin:0 auto;">
+          <input type="text" placeholder="Ваше имя" required style="width:100%; padding:18px; margin-bottom:16px; border-radius:9999px; border:1px solid #e2e8f0;">
+          <input type="tel" placeholder="Телефон" required style="width:100%; padding:18px; margin-bottom:24px; border-radius:9999px; border:1px solid #e2e8f0;">
+          <button type="submit" class="btn-primary" style="width:100%; padding:18px;">Отправить заявку</button>
         </form>
       </div>
     </div>
