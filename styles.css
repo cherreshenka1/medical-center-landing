@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -44,39 +40,19 @@ body {
   color: #0ea5e9;
 }
 
-.logo-icon {
-  font-size: 36px;
-}
+.logo-icon { font-size: 36px; }
 
-/* Красивые кнопки меню */
 .nav-links a {
   margin-left: 34px;
   text-decoration: none;
   color: #1f2937;
   font-weight: 600;
   font-size: 17px;
-  letter-spacing: -0.02em;
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .nav-links a:hover {
   color: #0ea5e9;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #0ea5e9;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
 }
 
 /* Кнопка "Записаться" */
@@ -93,7 +69,6 @@ body {
 .btn-primary:hover {
   background: #0284c8;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
 }
 
 .btn-secondary {
@@ -103,12 +78,6 @@ body {
   border-radius: 9999px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: #0ea5e9;
-  color: white;
 }
 
 /* ==================== HERO ==================== */
@@ -117,7 +86,7 @@ body {
   padding: 140px 0 100px;
 }
 
-.hero .container .grid {
+.hero .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -148,7 +117,6 @@ body {
   font-size: 18px;
 }
 
-/* Статистика */
 .stats {
   margin-top: 60px;
   display: flex;
@@ -164,31 +132,19 @@ body {
 .stats span {
   display: block;
   font-size: 16px;
-  font-weight: 500;
   color: #64748b;
   margin-top: 4px;
 }
 
-/* Изображение в hero */
 .hero-image img {
   width: 100%;
   border-radius: 24px;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-/* ==================== ОБЩИЕ СЕКЦИИ ==================== */
-.section {
-  padding: 100px 0;
-}
+/* ==================== ОБЩИЕ ==================== */
+.section { padding: 100px 0; }
 
-h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #0f172a;
-}
-
-/* Карточки */
 .card {
   background: white;
   border-radius: 24px;
@@ -200,33 +156,4 @@ h1 {
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.services-grid,
-.doctors-grid,
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service-card .price {
-  font-size: 32px;
-  font-weight: 700;
-  color: #0ea5e9;
-  margin: 12px 0;
-}
-
-.doctor-photo-frame {
-  width: 160px;
-  height: 160px;
-  background: #f1f5f9;
-  border-radius: 50%;
-  margin: 0 auto 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 70px;
-  border: 8px solid #e0f2fe;
 }
