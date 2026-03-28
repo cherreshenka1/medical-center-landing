@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -40,23 +44,24 @@ body {
   color: #0ea5e9;
 }
 
-.logo-icon { font-size: 36px; }
+.logo-icon {
+  font-size: 36px;
+}
 
-/* Красивые кнопки в меню */
+/* Красивые кнопки меню */
 .nav-links a {
   margin-left: 34px;
   text-decoration: none;
   color: #1f2937;
-  font-weight: 600;           /* жирный шрифт */
-  font-size: 17px;            /* крупнее */
-  letter-spacing: -0.02em;    /* красивое сжатие букв */
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.02em;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .nav-links a:hover {
   color: #0ea5e9;
-  transform: translateY(-1px);
 }
 
 .nav-links a::after {
@@ -91,13 +96,28 @@ body {
   box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
 }
 
-/* ==================== Остальной дизайн (уже красивый) ==================== */
+.btn-secondary {
+  color: #0ea5e9;
+  border: 2px solid #0ea5e9;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* ==================== HERO ==================== */
 .hero {
   background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
   padding: 140px 0 100px;
 }
 
-.hero .grid {
+.hero .container .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -108,11 +128,68 @@ body {
   font-size: 54px;
   line-height: 1.1;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.section { padding: 100px 0; }
+.hero-subtitle {
+  font-size: 24px;
+  color: #475569;
+  margin-bottom: 40px;
+}
 
-.card, .service-card, .doctor-card, .review-card {
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 18px 40px;
+  font-size: 18px;
+}
+
+/* Статистика */
+.stats {
+  margin-top: 60px;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stats span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Изображение в hero */
+.hero-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* ==================== ОБЩИЕ СЕКЦИИ ==================== */
+.section {
+  padding: 100px 0;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+/* Карточки */
+.card {
   background: white;
   border-radius: 24px;
   padding: 32px;
@@ -120,16 +197,25 @@ body {
   transition: all 0.3s;
 }
 
-.card:hover, .service-card:hover, .doctor-card:hover, .review-card:hover {
+.card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-.doctors-grid, .services-grid, .reviews-grid {
+.services-grid,
+.doctors-grid,
+.reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
+}
+
+.service-card .price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0ea5e9;
+  margin: 12px 0;
 }
 
 .doctor-photo-frame {
@@ -143,12 +229,4 @@ body {
   justify-content: center;
   font-size: 70px;
   border: 8px solid #e0f2fe;
-  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
-}
-
-.price {
-  font-size: 32px;
-  font-weight: 700;
-  color: #0ea5e9;
-  margin: 12px 0;
 }
