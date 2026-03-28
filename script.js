@@ -1,16 +1,12 @@
-// Плавная прокрутка по якорям
+// Плавная прокрутка
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    if (this.getAttribute('href') === '#') return;
-    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-// Простая интерактивность (можно расширять)
-console.log('%c Лендинг медицинского центра загружен успешно!', 'color: #0ea5e9; font-size: 16px; font-weight: bold');
+console.log('%c Многостраничный сайт медицинского центра загружен!', 'color:#0ea5e9; font-weight:bold');
