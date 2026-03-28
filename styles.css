@@ -6,7 +6,6 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
   color: #1f2937;
-  background: #f8fafc;
 }
 
 /* ==================== НАВИГАЦИЯ ==================== */
@@ -48,14 +47,12 @@ body {
   color: #1f2937;
   font-weight: 600;
   font-size: 17px;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #0ea5e9;
-}
+.nav-links a:hover { color: #0ea5e9; }
 
-/* Кнопка "Записаться" */
+/* Кнопки */
 .btn-primary {
   background: #0ea5e9;
   color: white;
@@ -63,13 +60,9 @@ body {
   border-radius: 9999px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background: #0284c8;
-  transform: translateY(-3px);
-}
+.btn-primary:hover { background: #0284c8; }
 
 .btn-secondary {
   color: #0ea5e9;
@@ -97,7 +90,7 @@ body {
   font-size: 54px;
   line-height: 1.1;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .hero-subtitle {
@@ -108,19 +101,14 @@ body {
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
-}
-
-.btn-large {
-  padding: 18px 40px;
-  font-size: 18px;
 }
 
 .stats {
   margin-top: 60px;
   display: flex;
-  gap: 60px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -133,27 +121,11 @@ body {
   display: block;
   font-size: 16px;
   color: #64748b;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .hero-image img {
   width: 100%;
   border-radius: 24px;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-/* ==================== ОБЩИЕ ==================== */
-.section { padding: 100px 0; }
-
-.card {
-  background: white;
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: all 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
