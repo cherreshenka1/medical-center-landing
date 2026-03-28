@@ -1,71 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: #1f2937; }
 
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+/* ==================== НАВИГАЦИЯ ==================== */
 .navbar {
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
 .navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
+  padding: 22px 24px;
 }
 
-.logo { display: flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 700; }
-.logo-icon { font-size: 32px; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 29px;
+  font-weight: 700;
+  color: #0ea5e9;
+}
 
+.logo-icon { font-size: 36px; }
+
+/* Красивые кнопки в меню */
 .nav-links a {
-  margin-left: 24px;
+  margin-left: 34px;
   text-decoration: none;
   color: #1f2937;
-  font-weight: 500;
+  font-weight: 600;           /* жирный шрифт */
+  font-size: 17px;            /* крупнее */
+  letter-spacing: -0.02em;    /* красивое сжатие букв */
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+.nav-links a:hover {
+  color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Кнопка "Записаться" */
 .btn-primary {
   background: #0ea5e9;
   color: white;
-  padding: 14px 28px;
+  padding: 14px 32px;
   border-radius: 9999px;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+.btn-primary:hover {
+  background: #0284c8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+}
+
+/* ==================== Остальной дизайн (уже красивый) ==================== */
 .hero {
   background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-  padding: 120px 0 80px;
+  padding: 140px 0 100px;
 }
 
 .hero .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
 }
 
-.hero h1 { font-size: 52px; line-height: 1.1; font-weight: 700; margin-bottom: 24px; }
-
-.section { padding: 80px 0; }
-.services-grid, .doctors-grid, .reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
-.service-card, .doctor-card, .review-card {
+.section { padding: 100px 0; }
+
+.card, .service-card, .doctor-card, .review-card {
   background: white;
-  padding: 32px;
   border-radius: 24px;
+  padding: 32px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.card:hover, .service-card:hover, .doctor-card:hover, .review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.doctors-grid, .services-grid, .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .doctor-photo-frame {
@@ -73,12 +137,18 @@ body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: #1f
   height: 160px;
   background: #f1f5f9;
   border-radius: 50%;
+  margin: 0 auto 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
-  margin: 0 auto 20px;
-  border: 6px solid #e0f2fe;
+  font-size: 70px;
+  border: 8px solid #e0f2fe;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
 }
 
-.price { font-size: 28px; font-weight: 700; color: #0ea5e9; margin: 12px 0; }
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0ea5e9;
+  margin: 12px 0;
+}
