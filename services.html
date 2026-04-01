@@ -4,32 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Услуги — Медицинский центр «Здоровье»</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .service-card {
-      background: white;
-      padding: 28px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .price {
-      font-size: 32px;
-      font-weight: 700;
-      color: #0ea5e9;
-      margin: 12px 0;
-    }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 30px;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -49,28 +25,77 @@
   <section class="section">
     <div class="container">
       <h1>Услуги и цены</h1>
+      
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card card">
           <h3>Консультация терапевта</h3>
           <p class="price">3 500 ₽</p>
-          <p>Первичный и повторный приём, осмотр, назначение лечения</p>
+          <p>Первичный и повторный приём, полный осмотр, назначение лечения и обследований</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>УЗИ органов брюшной полости</h3>
           <p class="price">2 800 ₽</p>
+          <p>Комплексное исследование печени, желчного пузыря, поджелудочной железы и селезёнки</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>ЭКГ с расшифровкой</h3>
           <p class="price">1 500 ₽</p>
+          <p>Электрокардиограмма сердца с подробным заключением врача-кардиолога</p>
         </div>
-        <div class="service-card">
+        <div class="service-card card">
           <h3>Общий анализ крови + СОЭ</h3>
           <p class="price">950 ₽</p>
+          <p>Расширенный клинический анализ крови с оценкой воспалительных процессов</p>
         </div>
-        <div class="service-card">
-          <h3>Общий анализ мочи + СОЭ</h3>
-          <p class="price">9150 ₽</p>
+        <div class="service-card card">
+          <h3>Консультация кардиолога</h3>
+          <p class="price">4 200 ₽</p>
+          <p>Диагностика и лечение заболеваний сердечно-сосудистой системы</p>
         </div>
+        <div class="service-card card">
+          <h3>МРТ головного мозга</h3>
+          <p class="price">7 500 ₽</p>
+          <p>Высокоточная диагностика заболеваний мозга и сосудов головы</p>
+        </div>
+        <div class="service-card card">
+          <h3>Приём невролога</h3>
+          <p class="price">3 900 ₽</p>
+          <p>Лечение головных болей, остеохондроза, невритов и других неврологических заболеваний</p>
+        </div>
+        <div class="service-card card">
+          <h3>УЗИ щитовидной железы</h3>
+          <p class="price">2 200 ₽</p>
+          <p>Диагностика заболеваний щитовидной железы с оценкой узлов и кровотока</p>
+        </div>
+        <div class="service-card card">
+          <h3>Консультация эндокринолога</h3>
+          <p class="price">4 000 ₽</p>
+          <p>Диагностика и лечение сахарного диабета, заболеваний щитовидной железы и ожирения</p>
+        </div>
+        <div class="service-card card">
+          <h3>Комплексная диагностика «Check-up»</h3>
+          <p class="price">14 900 ₽</p>
+          <p>Полное обследование организма за один день (анализы + УЗИ + ЭКГ + консультации)</p>
+        </div>
+        <div class="service-card card">
+          <h3>Приём гастроэнтеролога</h3>
+          <p class="price">4 300 ₽</p>
+          <p>Диагностика и лечение заболеваний желудка, кишечника и печени</p>
+        </div>
+        <div class="service-card card">
+          <h3>Вакцинация (включая грипп и COVID-19)</h3>
+          <p class="price">1 800 ₽</p>
+          <p>Вакцина + осмотр врача + сертификат</p>
+        </div>
+      </div>
+
+      <div id="appointment" style="margin-top:80px; background:white; padding:50px; border-radius:24px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+        <h2 style="text-align:center; margin-bottom:30px;">Записаться на приём</h2>
+        <form onsubmit="event.preventDefault(); alert('Заявка отправлена! Мы свяжемся с вами в течение 15 минут.');" style="max-width:520px; margin:0 auto;">
+          <input type="text" placeholder="Ваше имя" required style="width:100%; padding:18px; margin-bottom:16px; border-radius:9999px; border:1px solid #e2e8f0;">
+          <input type="tel" placeholder="Телефон" required style="width:100%; padding:18px; margin-bottom:24px; border-radius:9999px; border:1px solid #e2e8f0;">
+          <button type="submit" class="btn-primary" style="width:100%; padding:18px;">Отправить заявку</button>
+        </form>
       </div>
     </div>
   </section>
