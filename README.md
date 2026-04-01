@@ -24,3 +24,6 @@
 - Адаптивная вёрстка (Flex + Grid)
 - Font Awesome
 - Семантическая разметка
+
+ ### Живая страница
+[Открыть сайт →](https://cherreshenka1.github.io/medical-center-landing)
